@@ -388,19 +388,19 @@ section {
   position:absolute;
   right:300px;
 }
-.c{
-  height: 150px;
-  width:auto;
-  position:absolute;
-  right:0px;
-  border: 2px dashed green;
-}
 .b{
   border: 2px dashed green;
   height: 150px;
   width:auto;
   position:absolute;
   right:600px;
+}
+.c{
+  height: 150px;
+  width:auto;
+  position:absolute;
+  right:0px;
+  border: 2px dashed green;
 }
 .hobbies li{
   color:red
