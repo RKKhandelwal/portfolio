@@ -8,7 +8,22 @@
   <title>MyResume Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script>
+        function Convert() {
+            if (document.getElementById("choice").value == "Check for farenheight to celsius")
+                {
+                    var f = document.getElementById("n").value;
+                    var c = (f - 32) * 5/9;
+                    document.getElementById("celsius").value = c;
+                }
+            else if (document.getElementById("choice").value == "Check for celsius to farenheight")
+                {
+                    var a = document.getElementById("n").value;
+                    var b = (a * 9/5) + 32;
+                    document.getElementById("celsius").value = b;
+                }
+        }
+   </script>
   <!-- Favicons -->
   <link href="" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -47,6 +62,7 @@
       <ul>
         <li><a href="#hero" ><i class="bx bx-home"></i> <span>About me</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Hobbies</span></a></li>
+        <li><a href="#JScodes" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Travel Diaries</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Travel Diaries</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
@@ -102,6 +118,32 @@
 
       </div>
     </section><!-- End About Section -->
+    <!-- Start JSprojects section -->
+    <section id = "JScodes">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+              <h2>Travel Diaries</h2>
+            </div>
+    
+              <h1>Farenheight to Celsius converter</h1>
+
+              <select id = "choice">
+                  <option value = "Check for celsius to farenheight">Check for celsius to farenheight</option>
+                  <option value = "Check for farenheight to celsius">Check for farenheight to celsius</option>
+              </select>
+              <br></br>
+
+              <label for = "n">Enter a number to be converted</label>
+              <input type = "text" id = "n">
+
+              <button onclick = "Convert()">Convert</button>
+
+              <br></br>
+              <p>Answer: </p> <input type = "text" id = "celsius" disabled>
+
+
+    </section>
+          
 
     <!-- ======= Skills Section ======= -->
     <section id="resume" class="skills section-bg">
