@@ -22,6 +22,14 @@
                     var b = (a * 9/5) + 32;
                     document.getElementById("celsius").value = b;
                 }
+        function disp(){
+            document.getElementById("com").innerHTML = "Learning Event handleing in Java script";
+            document.getElementById("com").style.backgroundColor = "red";
+            document.getElementById("com").style.padding = "20px";
+            document.getElementById("com").style.color = "blue";
+            document.getElementById("com").style.fontSize = "30px";
+            document.getElementById("com").style.textShadow = "4px 4px 4px green"
+        }
         }
    </script>
   <!-- Favicons -->
@@ -62,7 +70,7 @@
       <ul>
         <li><a href="#hero" ><i class="bx bx-home"></i> <span>About me</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Hobbies</span></a></li>
-        <li><a href="#JScodes" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Travel Diaries</span></a></li>
+        <li><a href="#JScodes" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>JS codes</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Travel Diaries</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
@@ -122,7 +130,7 @@
     <section id = "JScodes">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-              <h2>Travel Diaries</h2>
+              <h2>My JS codes</h2>
             </div>
     
               <h1>Farenheight to Celsius converter</h1>
@@ -140,6 +148,10 @@
 
               <br></br>
               <p>Answer: </p> <input type = "text" id = "celsius" disabled>
+    
+              <h1>JavaScript button handling</h1>
+              <p id = "com"></p>
+              <button onclick="disp()">Click Me</button>
 
 
     </section>
