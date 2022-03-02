@@ -37,6 +37,29 @@
         function smallim(){
             document.getElementById("img").style.height = "300px";
         }
+        function change(){
+                var a = document.getElementById("b1").value;
+                document.getElementById("im1").style.height = "300px"
+                document.getElementById("im1").style.width = "300px"
+                if (a=="Red Apple")
+                {
+                    document.getElementById("im1").src = "photos/RedApple.jpeg";
+                    document.getElementById("b1").value = "Green Apple";
+                    document.getElementById("b1").innerHTML = "Green Apple";
+                }
+                else if(a=="Green Apple")
+                {
+                    document.getElementById("im1").src= "photos/GreenApple.jpeg";
+                    document.getElementById("b1").value = "Apple"
+                    document.getElementById("b1").innerHTML= "Apple";
+                }
+                else if (a=="Apple")
+                {
+                    document.getElementById("im1").src = "photos/Apple.jpeg";
+                    document.getElementById("b1").value="Red Apple";
+                    document.getElementById("b1").innerHTML="Red Apple"
+                }
+        }
    </script>
   <!-- Favicons -->
   <link href="" rel="icon">
@@ -162,6 +185,17 @@
     
               <h1>Mouse in and mouse out</h1>
               <img src="tennis.jpeg" onmouseover = "bigim()" onmouseout = "smallim()" id = "img" height = "300px">
+              <h1>CHECKING EVEN OR ODD</h1>
+              <script>
+                  var n = prompt("Enter Number")
+                  if (n%2 == 0)
+                  {alert(n+ "is an even number");}
+                  else
+                  {alert(n+ "is an odd number");}
+              </script>
+              <h1>Changing the image through button and changing the button</h1>
+              <img height = "300px" width = "300px" src="photos//Apple.jpeg" id= "im1">
+              <button id = "b1" onclick = "change()" value = "Red Apple">Red Apple</button>
 
 
     </section>
