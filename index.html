@@ -31,6 +31,12 @@
                 document.getElementById("com").style.fontSize = "30px";
                 document.getElementById("com").style.textShadow = "4px 4px 4px green";
             }
+        function bigim(){
+            document.getElementById("img").style.height = "400px";
+        }
+        function smallim(){
+            document.getElementById("img").style.height = "300px";
+        }
    </script>
   <!-- Favicons -->
   <link href="" rel="icon">
@@ -153,6 +159,9 @@
               <p id = "com"></p>
               <button onclick="disp()">Click Me</button>
               
+    
+              <h1>Mouse in and mouse out</h1>
+              <img src="tennis.jpeg" onmouseover = "bigim()" onmouseout = "smallim()" id = "img" height = "300px">
 
 
     </section>
