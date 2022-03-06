@@ -60,6 +60,22 @@
                     document.getElementById("b1").innerHTML="Red Apple"
                 }
         }
+        function Check(){
+          var num=document.getElementById("anum").value;
+          if (num%2==0)
+              document.getElementById("res").value="Even number";
+
+          else
+          document.getElementById("res").value="Odd number";
+        }
+        function Multiplication() {
+            var num = document.getElementById("num").value;
+            for (let x = 1; x<11; x++)
+            {
+                var product = num*x;
+                document.getElementById("p").innerHTML += num + " * " + x + " = " + product + "<br>";
+            }
+        }
    </script>
   <!-- Favicons -->
   <link href="" rel="icon">
@@ -169,14 +185,12 @@
                   <option value = "Check for farenheight to celsius">Check for farenheight to celsius</option>
               </select>
               <br></br>
-
               <label for = "n">Enter a number to be converted</label>
               <input type = "text" id = "n">
-
               <button onclick = "Convert()">Convert</button>
-
               <br></br>
               <p>Answer: </p> <input type = "text" id = "celsius" disabled>
+    
     
               <h1>JavaScript button handling</h1>
               <p id = "com"></p>
@@ -185,17 +199,27 @@
     
               <h1>Mouse in and mouse out</h1>
               <img src="tennis.jpeg" onmouseover = "bigim()" onmouseout = "smallim()" id = "img" height = "300px">
+        
+    
               <h1>CHECKING EVEN OR ODD</h1>
-              <script>
-                  var n = prompt("Enter Number")
-                  if (n%2 == 0)
-                  {alert(n+ "is an even number");}
-                  else
-                  {alert(n+ "is an odd number");}
-              </script>
-              <h1>Changing the image through button and changing the button</h1>
+                  <label for="n">ENTER NUMBER:</label>
+                  <input type="text" id = "anum">
+                  <br></br>
+                  <button onclick = "Check()">Check</button>
+                  <br></br>
+                  <label for="res">Result: </label>
+                  <input type="text" id="res" disabled>
+        
+  
+               <h1>Changing the image through button and changing the button</h1>
               <img height = "300px" width = "300px" src="Apple.jpeg" id= "im1">
               <button id = "b1" onclick = "change()" value = "Red Apple">Red Apple</button>
+  
+               
+              <h1>Multiplication table for the number you put into the system</h1>
+              <input type = "text" id = "num">Write any number</input>
+              <button onclick = "Multiplication()">Submit</button>
+              <p id = "p"></p> 
 
 
     </section>
