@@ -78,21 +78,22 @@
             }
         }
         function find() {
-            var y = document.getElementById("max").value;
-            var z = document.getElementById("min").value;
-            z-=1;
-            for (let x = z; x<y; x++){
-                z+=1;
-                if (z == 2) {
-                    document.getElementById("prime").innerHTML += z + ", ";
-                };
-                if (z%2==0){}
-                else{
-                    if (z%3==0){}
-                    else {
-                        if (z%5==0){}
-                        else {document.getElementById("prime").innerHTML += z + ", ";}
-                    };
+            document.getElementById("p").innerHTML = "Prime numbers: "
+            var y = Number(document.getElementById("max").value);
+            var z = Number(document.getElementById("min").value);
+            var o = 0;
+            for (let x = z; x <= y; x++) {
+                for (let a = 1; a <= x; a++){
+                    if(a==1){
+                        o=0}
+                    if (x % a == 0){
+                        o=o+a;
+                        if (o==1+x) {
+                            if (x==a){
+                                document.getElementById("primenum").innerHTML += x + ", "
+                            }
+                        }  
+                    }
                 };
             };
         }
@@ -259,7 +260,7 @@
               <input type = "text" id="max"></input>
               <br>    </br>
               <button onclick = "find()">Submit</button>
-              <p id = "prime">Prime numbers: </p>
+              <p id = "primenum">Prime numbers: </p>
 
 
               <h1>Factor Findor:</h1>
