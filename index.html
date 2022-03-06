@@ -76,6 +76,26 @@
                 document.getElementById("p").innerHTML += num + " * " + x + " = " + product + "<br>";
             }
         }
+        function find() {
+            var y = document.getElementById("max").value;
+            var z = document.getElementById("min").value;
+            z-=1;
+            for (let x = z; x<y; x++){
+                z+=1;
+                if (z == 2) {
+                    document.getElementById("p").innerHTML += z + ", ";
+                };
+                if (z%2==0){}
+                else{
+                    if (z%3==0){}
+                    else {
+                        if (z%5==0){}
+                        else {document.getElementById("p").innerHTML += z + ", ";}
+                    };
+                };
+            };
+        }
+        
    </script>
   <!-- Favicons -->
   <link href="" rel="icon">
@@ -220,6 +240,21 @@
               <input type = "text" id = "num">Write any number</input>
               <button onclick = "Multiplication()">Submit</button>
               <p id = "p"></p> 
+
+               
+              <h1>PRIME NUMBER FINDER:</h1>
+              <p>Range start:</p>
+              <input type = "text" id="min"></input>
+              <p>Range End:</p>
+              <input type = "text" id="max"></input>
+              <br>    </br>
+              <button onclick = "find()">Submit</button>
+              <p id = "p">Prime numbers: </p>
+
+
+
+
+
 
 
     </section>
