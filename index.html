@@ -96,6 +96,15 @@
                 };
             };
         }
+        function factors() {
+            document.getElementById("factor").innerHTML = "";
+            var num=document.getElementById("number").value;
+            for (let x=1; x<=num; x++){
+                if (num%x==0){
+                    document.getElementById("factor").innerHTML+=x+", "
+                }
+            };
+        }
         
    </script>
   <!-- Favicons -->
@@ -253,7 +262,10 @@
               <p id = "prime">Prime numbers: </p>
 
 
-
+              <h1>Factor Findor:</h1>
+              <input type = "text" id = "number"></input>
+              <button onclick = "factors()">Display factors</button>
+              <h3 id = "factor"></h3>
 
 
 
