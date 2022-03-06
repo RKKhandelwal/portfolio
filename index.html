@@ -72,8 +72,9 @@
             var num = document.getElementById("num").value;
             for (let x = 1; x<11; x++)
             {
-                var product = num*x;
-                document.getElementById("p").innerHTML += num + " * " + x + " = " + product + "<br>";
+              document.getElementById("p").innerHTML = "" 
+              var product = num*x;
+              document.getElementById("p").innerHTML += num + " * " + x + " = " + product + "<br>";
             }
         }
         function find() {
