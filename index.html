@@ -69,10 +69,10 @@
           document.getElementById("res").value="Odd number";
         }
         function Multiplication() {
+            document.getElementById("p").innerHTML = "" 
             var axy = document.getElementById("num").value;
             for (let p = 1; p<11; p++)
             {
-              document.getElementById("p").innerHTML = "" 
               var product = axy*p;
               document.getElementById("p").innerHTML += axy + " * " + p + " = " + product + "<br>";
             }
