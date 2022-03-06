@@ -84,14 +84,14 @@
             for (let x = z; x<y; x++){
                 z+=1;
                 if (z == 2) {
-                    document.getElementById("p").innerHTML += z + ", ";
+                    document.getElementById("prime").innerHTML += z + ", ";
                 };
                 if (z%2==0){}
                 else{
                     if (z%3==0){}
                     else {
                         if (z%5==0){}
-                        else {document.getElementById("p").innerHTML += z + ", ";}
+                        else {document.getElementById("prime").innerHTML += z + ", ";}
                     };
                 };
             };
@@ -250,7 +250,7 @@
               <input type = "text" id="max"></input>
               <br>    </br>
               <button onclick = "find()">Submit</button>
-              <p id = "p">Prime numbers: </p>
+              <p id = "prime">Prime numbers: </p>
 
 
 
