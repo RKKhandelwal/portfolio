@@ -8,6 +8,14 @@
   <title>MyResume Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <style>
+        #cl{
+            background-color: antiquewhite;
+            width: fit-content;
+            padding: 15px;
+            font-size: 25px;
+            }
+  </style>
   <script>
         function Convert() {
             if (document.getElementById("choice").value == "Check for farenheight to celsius")
@@ -106,6 +114,27 @@
                 }
             };
         }
+    
+        function rclock()
+        {
+            var hh=new Date().getHours();
+            var mm=new Date().getMinutes();
+            var ss=new Date().getSeconds();
+            if(hh<10)
+            {hh='0'+hh;}
+            if(mm<10)
+            {mm='0'+mm;}
+            if(ss<10)
+            {ss='0'+ss;}
+            document.getElementById("cl").innerHTML=hh+":"+mm+":"+ss;
+            refresh();
+        }
+        function refresh()
+        {
+            var r=1000;
+            myt=setTimeout('rclock()',r);
+        }
+    
         
    </script>
   <!-- Favicons -->
@@ -134,7 +163,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload = "rclock()">
 
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
@@ -268,8 +297,8 @@
               <button onclick = "factors()">Display factors</button>
               <p id = "factor"></p>
 
-
-
+              <h1>Clock</h1>
+              <div id="cl">17:37:06</div>
 
     </section>
           
