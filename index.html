@@ -128,7 +128,9 @@
             {mm='0'+mm;}
             if(ss<10)
             {ss='0'+ss;}
-            document.getElementById("cl").innerHTML=hh+":"+mm+":"+ss;
+            document.getElementById("h").innerHTML=hh+":";
+            document.getElementById("m").innerHTML=mm+":";
+            document.getElementById("s").innerHTML=ss;
             refresh();
         }
         function refresh()
@@ -300,7 +302,11 @@
               <p id = "factor"></p>
 
               <h1>Clock</h1>
-              <div id="cl">17:37:06</div>
+              <div id="cl">
+                <p id = "h"></p>
+                <p id = "m"></p>
+                <p id = "s"></p>
+              </div>
 
     </section>
           
