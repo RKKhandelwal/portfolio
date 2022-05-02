@@ -47,10 +47,7 @@
             border: 2px solid blue;
             opacity: 0;
             animation: slides 20s infinite; 
-        }
-        pen{
-            border: 5px solid red;
-        }
+    }
         @keyframes slides{25%{opacity: 1;}
                         40%{opacity: 0;}}
         .slides img:nth-child(1) {animation-delay: 0s;}
@@ -347,31 +344,7 @@
                 <p id = "m" style = "float: left;"></p>
                 <p id = "s" style = "float: left;"></p>
               </div>
-              <canvas id="canva2" height="500" width = "900" style = "border:2px black; background-color:antiquewhite"></canvas>
-              <script>
-                  var can = document.getElementById("canva1");
-                  var pen = can.getContext("2d");
-                  var img = new Image
-
-                  img.onload = start;
-                  img.onerror = function(){alert(img.src+"is failing to load")}
-                  img.src = "beach.png";
-                  function start(){
-                      p.drawImage(img,200,100)
-                  }
-
-                  pen.font = "30px URW Chancery L, cursive";
-                  pen.fillStyle = "blue";
-                  pen.fillText("Hello from Hawaii", 320, 50);
-                  pen.font = "15px URW Chancery L, cursive";
-                  pen.fillStyle = "green";
-                  pen.fillText("Where the sun always shines,", 470, 200);
-                  pen.fillText("and the waves never-ending",470,230)
-                  pen.font = "25px calibri" ;
-                  pen.fillStyle = "black";
-                  pen.fillText("See you soon", 400, 430);
-                  pen.fillText("From: Rishi", 412, 475);
-              </script>
+              <canvas id="canva2" height="500" width = "900" style = "border:2px black; background-color:antiquewhite"></canvas> 
               <h1>Slide Shows</h1>
               <br>
               <h1 class = "ssh1">Slideshow</h1>
